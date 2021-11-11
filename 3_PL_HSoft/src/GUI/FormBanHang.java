@@ -609,7 +609,7 @@ public class FormBanHang extends javax.swing.JDialog {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void lblXMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblXMouseClicked
-        this.dispose();
+//        this.dispose();
     }//GEN-LAST:event_lblXMouseClicked
 
     private void lblXMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblXMouseEntered
