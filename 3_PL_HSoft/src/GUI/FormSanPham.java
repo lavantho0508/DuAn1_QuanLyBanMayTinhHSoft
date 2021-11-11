@@ -812,7 +812,7 @@ public class FormSanPham extends javax.swing.JDialog {
 //                this.fillTableVariantValuesByID();
 //                this.fillComboBoxIDVariant_ProductVarint();
                 Helper.DialogHelper.alert(this, "Xóa thành công!");
-//                tabs.setSelectedIndex(1);
+
             } catch (Exception e) {
                 e.printStackTrace();
                 Helper.DialogHelper.alert(this, "Xóa thất bại!");
