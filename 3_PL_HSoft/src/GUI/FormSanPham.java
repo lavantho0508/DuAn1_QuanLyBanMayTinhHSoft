@@ -50,8 +50,8 @@ public class FormSanPham extends javax.swing.JDialog {
     int _rowOptionValues = -1;
     int _rowProductVariant = -1;
     int _thuocTinhs = 0;
-    List<String> _cbbTT = new ArrayList<>();
-    List<String> _cbbGTTT = new ArrayList<>();
+    List<String> _ListcbbTT = new ArrayList<>();
+    List<String> _ListcbbGTTT = new ArrayList<>();
     File _file;
     FileDialog _fd = new FileDialog(new Frame(), "Chọn ảnh cho sản phẩm", FileDialog.LOAD);
     String _images = null;
@@ -428,8 +428,8 @@ public class FormSanPham extends javax.swing.JDialog {
         Product product = (Product) cbb_Product.getSelectedItem();
         Product_options product_options = new Product_options();
         List<Object> list = new ArrayList<>();
-        for (int i = 0; i < _cbbTT.size(); i++) {
-            Options out = _IQLySanPhamService.findByNamesOptions(_cbbTT.get(i));
+        for (int i = 0; i < _ListcbbTT.size(); i++) {
+            Options out = _IQLySanPhamService.findByNamesOptions(_ListcbbTT.get(i));
             System.out.println(out.getID_Options());
             product_options.setID_Product(product.getID_Product());
             product_options.setID_Options(out.getID_Options());
@@ -449,9 +449,9 @@ public class FormSanPham extends javax.swing.JDialog {
         Product_variant product_variant = (Product_variant) cbb_IDVariant.getSelectedItem();
         Variant_values variant_values = new Variant_values();
 
-        for (int i = 0; i < _cbbTT.size(); i++) {
-            Options options = _IQLySanPhamService.findByNamesOptions(_cbbTT.get(i));
-            Options_values options_values = _IQLySanPhamService.findByNamesOptions_values(_cbbGTTT.get(i));
+        for (int i = 0; i < _ListcbbTT.size(); i++) {
+            Options options = _IQLySanPhamService.findByNamesOptions(_ListcbbTT.get(i));
+            Options_values options_values = _IQLySanPhamService.findByNamesOptions_values(_ListcbbGTTT.get(i));
             variant_values.setID_Product(product.getID_Product());
             variant_values.setID_variant(product_variant.getID_variant());
             variant_values.setID_Options(options.getID_Options());
@@ -597,8 +597,8 @@ public class FormSanPham extends javax.swing.JDialog {
         Product product = (Product) cbb_Product.getSelectedItem();
         Product_options product_options = new Product_options();
         try {
-            for (int i = 0; i < _cbbTT.size(); i++) {
-                Options out = _IQLySanPhamService.findByNamesOptions(_cbbTT.get(i));
+            for (int i = 0; i < _ListcbbTT.size(); i++) {
+                Options out = _IQLySanPhamService.findByNamesOptions(_ListcbbTT.get(i));
                 product_options.setID_Product(product.getID_Product());
                 product_options.setID_Options(out.getID_Options());
                 if (rdb_0_variantValues.isSelected()) {
@@ -632,9 +632,9 @@ public class FormSanPham extends javax.swing.JDialog {
             Product_variant product_variant = (Product_variant) cbb_IDVariant.getSelectedItem();
             Variant_values variant_values = new Variant_values();
 
-            for (int i = 0; i < _cbbTT.size(); i++) {
-                Options options = _IQLySanPhamService.findByNamesOptions(_cbbTT.get(i));
-                Options_values options_values = _IQLySanPhamService.findByNamesOptions_values(_cbbGTTT.get(i));
+            for (int i = 0; i < _ListcbbTT.size(); i++) {
+                Options options = _IQLySanPhamService.findByNamesOptions(_ListcbbTT.get(i));
+                Options_values options_values = _IQLySanPhamService.findByNamesOptions_values(_ListcbbGTTT.get(i));
                 variant_values.setID_Product(product.getID_Product());
                 variant_values.setID_variant(product_variant.getID_variant());
                 variant_values.setID_Options(options.getID_Options());
@@ -2727,8 +2727,8 @@ public class FormSanPham extends javax.swing.JDialog {
     }//GEN-LAST:event_tbl_ProductVariantMouseClicked
 
     private void btn_saveOptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_saveOptionsActionPerformed
-        _cbbTT.add(String.valueOf(_cbx.getSelectedItem()));
-        _cbbGTTT.add(String.valueOf(_cbx2.getSelectedItem()));
+        _ListcbbTT.add(String.valueOf(_cbx.getSelectedItem()));
+        _ListcbbGTTT.add(String.valueOf(_cbx2.getSelectedItem()));
     }//GEN-LAST:event_btn_saveOptionsActionPerformed
 
     private void lbl_imagesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_imagesMouseClicked
